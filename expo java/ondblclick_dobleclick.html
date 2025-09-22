@@ -1,0 +1,34 @@
+<!--samuel puerto 3203084-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>ondblclick</title>
+  <style>
+    #texto {
+      font-size: 20px;
+      color: rgb(9, 121, 65);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2 id="texto" ondblclick="cambiarTexto()">!Presiona dos veces para ganar 🦾!</h2>
+
+  <script>
+    let alt = false;
+
+    function cambiarTexto() {
+      let elemento = document.getElementById("texto");
+
+      if (!alt) {
+        elemento.innerHTML = " !Ganaste 2 milloness💰! ";
+        elemento.style.color = "red";
+      } 
+      alt = !alt;
+
+      console.log(`se detecto que alguien hizo doble click`);
+    }
+  </script>
+</body>
+</html>
